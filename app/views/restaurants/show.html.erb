@@ -1,0 +1,20 @@
+<h1>Info about Restaurant</h1>
+
+<p>Name: <%= @restaurant.name %></p>
+<p>Address: <%= @restaurant.address %></p>
+<p>Rating: <%= @restaurant.rating %></p>
+
+<!-- Não use tag a no rails, sempre use link_to -->
+<!-- <a href="/restaurants">All Restaurants</a> -->
+
+<p>
+  <%= link_to 'All Restaurants', restaurants_path %>
+</p>
+
+<p>
+  <%= link_to 'Edit this Restaurant', edit_restaurant_path(@restaurant) %>
+</p>
+
+<p>
+  <%= link_to 'Remove this Restaurant', restaurant_path(@restaurant), method: :delete, data: { confirm: 'Are you Sure?' } %>
+</p>
